@@ -55,9 +55,7 @@ class App extends Component {
           }
         }
         if (colBingo) {
-          console.log("col bingo!");
           bingo_cols[i] = true;
-          console.log(bingo_cols);
           is_bingo = true;
         }
       }
@@ -70,7 +68,6 @@ class App extends Component {
         }
       }
       if (diagBingoDown) {
-        console.log("diagonal bingo!");
         bingo_diagonal_down = true;
         is_bingo = true;
       }
@@ -83,7 +80,6 @@ class App extends Component {
         }
       }
       if (diagBingoUp) {
-        console.log("diagonal bingo!");
         bingo_diagonal_up = true;
         is_bingo = true;
       }
@@ -97,9 +93,7 @@ class App extends Component {
           }
         }
         if (rowBingo) {
-          console.log("row bingo!");
           bingo_rows[i] = true;
-          console.log(bingo_rows);
           is_bingo = true;
         }
       }
