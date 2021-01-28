@@ -1,8 +1,8 @@
 {
-  "name": "tinderbingo",
+  "name": "genforsbingo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Magssch.github.io/Tinder-bingo-web",
+  "homepage": "https://magnhan.github.io/genfors-bingo-web/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.7.0",
