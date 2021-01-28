@@ -5,7 +5,7 @@ body {
 
 .App {
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -22,7 +22,10 @@ body {
   transition: 0.2s;
 }
 
-a, a:hover, a:active, a:visited {
+a,
+a:hover,
+a:active,
+a:visited {
   color: white;
   text-decoration: none;
 }
@@ -32,7 +35,9 @@ a, a:hover, a:active, a:visited {
 }
 
 .github {
-  position: absolute; bottom: 10px; right: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   transition: 0.2s;
   font-size: 15px;
   max-height: 9vw;
@@ -47,16 +52,20 @@ a, a:hover, a:active, a:visited {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  background-color: #2196F3;
+  background-color: #2196f3;
   max-width: 1000px;
   max-height: 85vh;
   min-height: 85vh;
-  position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: hidden;
   margin: 15vh auto auto;
 }
 
-.categories {
+.newBoard {
   transition: 0.1s;
   display: flex;
   flex-direction: row;
@@ -64,17 +73,26 @@ a, a:hover, a:active, a:visited {
   margin-right: 2vw;
 }
 
+.newBoard > button {
+  display: block;
+  border: 2px solid black;
+  background-color: #2196f3;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
 .popup {
   z-index: 10000;
   width: 100vw;
   min-height: 100vh;
   font-size: 10vw;
-  background:rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   animation: opacity 1s;
   opacity: 0;
   display: none;
   cursor: pointer;
-  position:fixed;
+  position: fixed;
 }
 
 .show {
@@ -97,16 +115,16 @@ a, a:hover, a:active, a:visited {
 }
 
 @media all and (max-width: 1150px) {
-
   .github {
-    position: absolute; top: 10px; right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   .categories {
     transition: 0.2s;
     margin-right: 8vw;
   }
-
 }
 
 @media all and (max-width: 650px) {
@@ -128,5 +146,4 @@ a, a:hover, a:active, a:visited {
   .categories {
     margin-right: 0;
   }
-
 }
