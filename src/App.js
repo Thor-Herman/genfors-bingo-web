@@ -3,7 +3,7 @@ import BingoCell from "./components/BingoCell";
 import "./App.css";
 import logo from "./github.svg";
 import fireImg from "./components/BingoCell/backgroundt.png";
-import bingopile from "./bingo.txt";
+import bingopile from "./bingo.json";
 
 class App extends Component {
   constructor(props) {
@@ -132,7 +132,7 @@ class App extends Component {
   }
 
   generateBoard = () => {
-    let bingoArray = bingopile.split("\n");
+    let bingoArray = bingopile.options;
     let picks = App.generatePicks(bingoArray.length);
     let pickedText = bingoArray.filter((item, key) => {
       return picks.indexOf(key) > -1;
