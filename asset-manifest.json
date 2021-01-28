@@ -1,16 +1,23 @@
 {
-  "main.css": "/Tinder-bingo-web/static/css/main.e328178f.chunk.css",
-  "main.js": "/Tinder-bingo-web/static/js/main.85768912.chunk.js",
-  "main.js.map": "/Tinder-bingo-web/static/js/main.85768912.chunk.js.map",
-  "static/js/1.0dc43ab9.chunk.js": "/Tinder-bingo-web/static/js/1.0dc43ab9.chunk.js",
-  "static/js/1.0dc43ab9.chunk.js.map": "/Tinder-bingo-web/static/js/1.0dc43ab9.chunk.js.map",
-  "runtime~main.js": "/Tinder-bingo-web/static/js/runtime~main.8eed58b0.js",
-  "runtime~main.js.map": "/Tinder-bingo-web/static/js/runtime~main.8eed58b0.js.map",
-  "static/media/github.svg": "/Tinder-bingo-web/static/media/github.a0b866ca.svg",
-  "static/media/BingoCell.css": "/Tinder-bingo-web/static/media/backgroundt.2abdc64b.png",
-  "static/media/bingo.txt": "/Tinder-bingo-web/static/media/bingo.93c4e5b4.txt",
-  "static/css/main.e328178f.chunk.css.map": "/Tinder-bingo-web/static/css/main.e328178f.chunk.css.map",
-  "index.html": "/Tinder-bingo-web/index.html",
-  "precache-manifest.a78f35419731168b7fed06379219eabb.js": "/Tinder-bingo-web/precache-manifest.a78f35419731168b7fed06379219eabb.js",
-  "service-worker.js": "/Tinder-bingo-web/service-worker.js"
+  "files": {
+    "main.css": "/genfors-bingo-web/static/css/main.92f0aee4.chunk.css",
+    "main.js": "/genfors-bingo-web/static/js/main.773cd046.chunk.js",
+    "main.js.map": "/genfors-bingo-web/static/js/main.773cd046.chunk.js.map",
+    "runtime-main.js": "/genfors-bingo-web/static/js/runtime-main.fc7a754f.js",
+    "runtime-main.js.map": "/genfors-bingo-web/static/js/runtime-main.fc7a754f.js.map",
+    "static/js/2.4cb68930.chunk.js": "/genfors-bingo-web/static/js/2.4cb68930.chunk.js",
+    "static/js/2.4cb68930.chunk.js.map": "/genfors-bingo-web/static/js/2.4cb68930.chunk.js.map",
+    "index.html": "/genfors-bingo-web/index.html",
+    "static/css/main.92f0aee4.chunk.css.map": "/genfors-bingo-web/static/css/main.92f0aee4.chunk.css.map",
+    "static/js/2.4cb68930.chunk.js.LICENSE.txt": "/genfors-bingo-web/static/js/2.4cb68930.chunk.js.LICENSE.txt",
+    "static/media/BingoCell.css": "/genfors-bingo-web/static/media/backgroundt.24a5258a.png",
+    "static/media/bingo.txt": "/genfors-bingo-web/static/media/bingo.01c17a52.txt",
+    "static/media/github.1dd51261.svg": "/genfors-bingo-web/static/media/github.1dd51261.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc7a754f.js",
+    "static/js/2.4cb68930.chunk.js",
+    "static/css/main.92f0aee4.chunk.css",
+    "static/js/main.773cd046.chunk.js"
+  ]
 }
