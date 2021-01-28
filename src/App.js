@@ -3,6 +3,7 @@ import BingoCell from "./components/BingoCell";
 import "./App.css";
 import logo from "./github.svg";
 import fireImg from "./components/BingoCell/backgroundt.png";
+import bingopile from "./bingo.txt";
 
 class App extends Component {
   constructor(props) {
@@ -131,39 +132,29 @@ class App extends Component {
   }
 
   generateBoard = () => {
-    let rawFile = new XMLHttpRequest();
-    rawFile.open("GET", require("./bingo.txt"), false);
-    rawFile.onreadystatechange = () => {
-      if (rawFile.readyState === 4) {
-        if (rawFile.status === 200 || rawFile.status === 0) {
-          let allText = rawFile.responseText;
-          let bingoArray = allText.split("\n");
-          let picks = App.generatePicks(bingoArray.length);
-          let pickedText = bingoArray.filter((item, key) => {
-            return picks.indexOf(key) > -1;
-          });
-          let matrix = [];
-          for (let i = 0; i < 4; i++) {
-            matrix[i] = [];
-            for (let j = 0; j < 4; j++) {
-              matrix[i][j] = false;
-            }
-          }
-          const initState = {
-            text: pickedText,
-            bingo_id: this.state.bingo_id + 16,
-            chosen_cells: matrix,
-            bingo_rows: [],
-            bingo_cols: [],
-            bingo_diagonal_down: false,
-            bingo_diagonal_up: false,
-          };
-          localStorage.setItem("bingoState", JSON.stringify(initState));
-          this.setState(initState);
-        }
+    let bingoArray = bingopile.split("\n");
+    let picks = App.generatePicks(bingoArray.length);
+    let pickedText = bingoArray.filter((item, key) => {
+      return picks.indexOf(key) > -1;
+    });
+    let matrix = [];
+    for (let i = 0; i < 4; i++) {
+      matrix[i] = [];
+      for (let j = 0; j < 4; j++) {
+        matrix[i][j] = false;
       }
+    }
+    const initState = {
+      text: pickedText,
+      bingo_id: this.state.bingo_id + 16,
+      chosen_cells: matrix,
+      bingo_rows: [],
+      bingo_cols: [],
+      bingo_diagonal_down: false,
+      bingo_diagonal_up: false,
     };
-    rawFile.send(null);
+    localStorage.setItem("bingoState", JSON.stringify(initState));
+    this.setState(initState);
   };
 
   render() {
