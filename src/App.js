@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import BingoCell from "./components/BingoCell";
 import "./App.css";
 import logo from "./github.svg";
-import fireImg from "./components/BingoCell/backgroundt.png";
+import fireImg from "./components/BingoCell/Abakule-ny.png";
 import bingopile from "./bingo.json";
 
 class App extends Component {
@@ -20,6 +20,8 @@ class App extends Component {
     bingo_diagonal_down: false,
     bingo_diagonal_up: false,
     is_bingo: false,
+    showRules: false,
+    confirmReset: false,
   };
 
   componentDidMount() {
@@ -159,39 +161,57 @@ class App extends Component {
           onClick={() => this.setState({ is_bingo: false })}
         >
           <div className="bingotext">
-            <span role="img" aria-label="flame">
-              🔥
-            </span>
+            <img src={fireImg} alt="Abakus logo" />
             <span>Bingo!</span>
-            <span role="img" aria-label="flame">
-              🔥
-            </span>
-            <p>(Trykk for å lukke)</p>
+            <img src={fireImg} alt="Abakus logo" />
           </div>
+          <p>(Trykk for å lukke)</p>
+        </div>
+        <div
+          className={this.state.showRules ? "popup show" : "popup"}
+          onClick={() => this.setState({ showRules: false })}
+        >
+          <div className="textWindow">
+            <p>TODO @HAGNUS: Legg inn regler her</p>
+            <br />
+            <p>1. regel etc.</p>
+          </div>
+          <p>(Trykk for å lukke)</p>
+        </div>
+        <div
+          className={this.state.confirmReset ? "popup show" : "popup"}
+          onClick={() => this.setState({ confirmReset: false })}
+        >
+          <div className="textWindow">
+            <p>Er du sikker på at du vil bytte brett?</p>
+            <p>Dette kan ikke angres.</p>
+            <br />
+            <button onClick={() => this.generateBoard()}>
+              Ja, jeg er sikker
+            </button>
+          </div>
+          <p>(Eller trykk for å lukke)</p>
         </div>
 
-        <div className="github">
-          <a href={"https://github.com/magnhan/genfors-bingo-web"}>
-            <img
-              src={logo}
-              style={{ maxHeight: 50, maxWidth: "6vw" }}
-              alt="Github"
-            />
-            <br />
-            <div>Regler</div>
-          </a>
-        </div>
         <div className="App-header">
           <span className="logo">
-            <img
-              src={fireImg}
-              style={{ maxHeight: 30, maxWidth: "6vw" }}
-              alt="🔥"
-            />
+            <img src={fireImg} alt="Abakus logo" />
             <span> Genforsbingo</span>
           </span>
           <div className="newBoard">
-            <button onClick={() => this.generateBoard()}>Nytt brett!</button>
+            <button onClick={() => this.setState({ confirmReset: true })}>
+              Gi meg et nytt brett
+            </button>
+          </div>
+          <div className="rules">
+            <button onClick={() => this.setState({ showRules: true })}>
+              Regler
+            </button>
+          </div>
+          <div className="github">
+            <a href={"https://github.com/magnhan/genfors-bingo-web"}>
+              <img src={logo} alt="Github" />
+            </a>
           </div>
         </div>
         <div className="bingoBoard">

@@ -1,53 +1,53 @@
 .cell {
-    background-color: rgba(0, 0, 0, 0.8);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 100%;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-    display: flex;
-    color: white;
-    font-weight: bold;
-    overflow: hidden;
-    word-break: break-word;
-    transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  word-break: break-word;
+  transition: 0.2s;
 }
 
 .cell-selected {
-    background-image: url('backgroundt.png') ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 70%;
-    transition: 0.2s;
+  background-image: url("Abakule-ny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 70%;
+  transition: 0.2s;
 }
 
 .cell:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .cell p {
-    margin: auto;
+  margin: auto;
 }
 
-@media all and (max-height: 600px) {
-    .cell {
-        font-size: 12px;
-        padding: 9px;
-    }
+@media all and (max-height: 650px) {
+  .cell {
+    font-size: 12px;
+    padding: 9px;
+  }
 }
 
 @media all and (max-width: 800px) {
-    .cell {
-        font-size: 2.5vw;
-        background-size: auto 70%;
-        padding: 9px;
-        transition: 0.2s;
-    }
-    .cell-selected {
-        background-size: auto 40%;
-        transition: 0.2s;
-    }
+  .cell {
+    font-size: 2.5vw;
+    background-size: auto 70%;
+    padding: 9px;
+    transition: 0.2s;
+  }
+  .cell-selected {
+    background-size: auto 40%;
+    transition: 0.2s;
+  }
 }

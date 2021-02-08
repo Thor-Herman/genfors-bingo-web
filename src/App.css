@@ -1,5 +1,5 @@
 body {
-  background-color: #282c34;
+  background-color: #343434;
   user-select: none;
 }
 
@@ -16,7 +16,7 @@ body {
   align-items: center;
   font-size: calc(10px + 3vmin);
   color: white;
-  width: 100%;
+  width: 95%;
   margin: auto;
   justify-content: space-between;
   transition: 0.2s;
@@ -32,28 +32,39 @@ a:visited {
 
 .logo {
   margin-left: 3vw;
+  display: flex;
+}
+
+.logo > img {
+  margin: auto 1vw auto auto;
+  height: calc(10px + 3vmin);
+}
+
+.logo > span {
+  margin: auto;
 }
 
 .github {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
   transition: 0.2s;
   font-size: 15px;
-  max-height: 9vw;
-  max-width: 7vw;
+  border-radius: 100%;
 }
 
 .github:hover {
-  opacity: 0.5;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  clip-path: rect(10px, 20px, 30px, 40px);
+  background-size: 400% 400%;
+  animation: gradient 3s ease-in-out infinite;
 }
 
 .bingoBoard {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  background-color: #2196f3;
-  max-width: 1000px;
+  background-color: #525251;
+  width: 100vw;
+  max-width: 110vh;
+  height: 100vw;
   max-height: 85vh;
   min-height: 85vh;
   position: absolute;
@@ -67,21 +78,55 @@ a:visited {
 
 .newBoard {
   transition: 0.1s;
-  display: flex;
-  flex-direction: row;
-  margin-top: 5px;
-  margin-right: 2vw;
+  margin: 0 20px 0 auto;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 20px;
+  background-color: #e21617;
 }
 
 .newBoard > button {
   display: block;
-  border: 2px solid black;
-  background-color: #2196f3;
+  border: 5px solid #b21c17;
   color: #ffffff;
-  padding: 1rem;
-  border-radius: 1rem;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e21617;
 }
 
+.rules {
+  transition: 0.1s;
+  margin: 0 20px 0 0;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 20px;
+  background-color: #e21617;
+}
+
+.rules > button {
+  display: block;
+  border: 5px solid #b21c17;
+  color: #ffffff;
+  height: 7vh;
+  width: 7vh;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e21617;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .popup {
   z-index: 10000;
   width: 100vw;
@@ -99,51 +144,92 @@ a:visited {
   visibility: visible;
   animation: opacity 1s;
   opacity: 1;
-  display: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
 .bingotext {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  margin: auto;
   color: white;
 }
 
-.bingotext p {
-  font-size: 2vw;
+.bingotext > img {
+  height: 10vw;
+  margin: auto 2rem;
 }
 
-@media all and (max-width: 1150px) {
-  .github {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-
-  .categories {
-    transition: 0.2s;
-    margin-right: 8vw;
-  }
+.textWindow {
+  font-size: 2rem;
+  color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.textWindow > button {
+  font-size: 1.5rem;
+  display: block;
+  border: 5px solid #b21c17;
+  color: #ffffff;
+  height: 7vh;
+  width: 15vh;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e21617;
+  margin: 10vh auto auto auto;
+}
+.popup > p {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: white;
+  margin: auto;
 }
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 768px) {
   .App-header {
     flex-direction: column;
     justify-content: center;
     transition: 0.2s;
+    font-size: 4vh;
   }
-
   .logo {
     margin-left: 0;
   }
 
-  .github {
-    transition: 0.2s;
-    font-size: 1.7vw;
+  .logo > img {
+    height: 3.5vh;
+  }
+  .newBoard {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 30%;
+    margin: 0;
+  }
+  .newBoard > button {
+    width: 100%;
   }
 
-  .categories {
-    margin-right: 0;
+  .bingoBoard {
+    min-height: 75%;
+  }
+
+  .github {
+    transition: 0.2s;
+    font-size: 15px;
+    max-height: unset;
+    max-width: unset;
+    position: absolute;
+    bottom: 30px;
+  }
+  .rules {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    width: 30%;
+    margin: 0;
+  }
+  .rules > button {
+    width: 100%;
   }
 }
