@@ -87,7 +87,7 @@ a:visited {
 
 .newBoard > button {
   display: block;
-  border: 5px solid #b21c17;
+  border: 3px solid #b21c17;
   color: #ffffff;
   height: 7vh;
   width: 7vh;
@@ -107,7 +107,7 @@ a:visited {
 
 .rules > button {
   display: block;
-  border: 5px solid #b21c17;
+  border: 3px solid #b21c17;
   color: #ffffff;
   height: 7vh;
   width: 7vh;
@@ -131,7 +131,7 @@ a:visited {
   z-index: 10000;
   width: 100vw;
   min-height: 100vh;
-  font-size: 10vw;
+  font-size: 2rem;
   background: rgba(0, 0, 0, 0.9);
   animation: opacity 1s;
   opacity: 0;
@@ -160,19 +160,19 @@ a:visited {
 }
 
 .textWindow {
-  font-size: 2rem;
   color: white;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
+
 .textWindow > button {
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: block;
   border: 5px solid #b21c17;
   color: #ffffff;
-  height: 7vh;
-  width: 15vh;
+  height: 20vh;
+  width: 40vw;
   border-radius: 20px;
   cursor: pointer;
   background-color: #e21617;
@@ -201,7 +201,7 @@ a:visited {
   }
   .newBoard {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 10px;
     width: 30%;
     margin: 0;
@@ -217,14 +217,17 @@ a:visited {
   .github {
     transition: 0.2s;
     font-size: 15px;
-    max-height: unset;
     max-width: unset;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
   }
+  .github > a > img {
+    max-height: 7vh;
+  }
+
   .rules {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
     width: 30%;
     margin: 0;
