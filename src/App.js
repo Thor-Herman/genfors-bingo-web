@@ -172,9 +172,15 @@ class App extends Component {
           onClick={() => this.setState({ showRules: false })}
         >
           <div className="textWindow">
-            <p>TODO @HAGNUS: Legg inn regler her</p>
+            <p>Regler</p>
             <br />
-            <p>1. regel etc.</p>
+            <p>1) Du har bingo om du er førstemann til fire på rad</p>
+            <br />
+            <p>2) Radene er vertikale, horisontale og diagonale</p>
+            <br />
+            <p>3) Den endelige bingoen får du når du har fylt brettet</p>
+            <br />
+            <p>4) Vinneren er førstemann til å få alle fire bingoer (eller h*n som har flest når genfors er over)</p>
           </div>
           <p>(Trykk for å lukke)</p>
         </div>
