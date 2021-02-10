@@ -47,6 +47,11 @@ class App extends Component {
     let bingo_diagonal_down = this.state.bingo_diagonal_down;
     let bingo_diagonal_up = this.state.bingo_diagonal_up;
     let is_bingo = false;
+    let is_full_bingo = cells.every(function (level2, i) {
+      return level2.every(function (bool) {
+        return bool;
+      });
+    });
 
     for (let i = 0; i < 4; i++) {
       if (!this.state.bingo_cols[i]) {
@@ -100,6 +105,7 @@ class App extends Component {
         }
       }
     }
+    is_bingo = is_full_bingo ? false : is_bingo;
     const newState = {
       text: this.state.text,
       chosen_cells: cells,
@@ -108,6 +114,7 @@ class App extends Component {
       bingo_diagonal_down: bingo_diagonal_down,
       bingo_diagonal_up: bingo_diagonal_up,
       is_bingo: is_bingo,
+      is_full_bingo: is_full_bingo,
       bingo_id: this.state.bingo_id,
     };
     this.setState(newState);
@@ -152,6 +159,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div
+          className={this.state.is_full_bingo ? "popup show" : "popup"}
+          onClick={() => this.setState({ is_full_bingo: false })}
+        >
+          <div className="bingotext">
+            <img src={fireImg} alt="Abakus logo" />
+            <img src={fireImg} alt="Abakus logo" />
+            <img src={fireImg} alt="Abakus logo" />
+          </div>
+          <div className="bingotext">
+            <span>Gratulerer, du har vunnet Genfors!</span>
+          </div>
+          <p>(Trykk for å lukke)</p>
+        </div>
         <div
           className={this.state.is_bingo ? "popup show" : "popup"}
           onClick={() => this.setState({ is_bingo: false })}
