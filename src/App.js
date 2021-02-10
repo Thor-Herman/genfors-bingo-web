@@ -114,25 +114,23 @@ class App extends Component {
     localStorage.setItem("bingoState", JSON.stringify(newState));
   };
 
-  static generatePicks(numberOfLines) {
+  static generatePicks(bingoArray, numberOfLines) {
     let picks = [];
     for (let i = 0; i < 16; i++) {
       let k = Math.floor(Math.random() * numberOfLines);
-
+      console.log(k);
       while (picks.indexOf(k) > -1) {
         k = Math.floor(Math.random() * numberOfLines);
+        console.log(k);
       }
-      picks[i] = k;
+      picks[i] = bingoArray[k];
     }
     return picks;
   }
 
   generateBoard = () => {
     let bingoArray = bingopile.options;
-    let picks = App.generatePicks(bingoArray.length);
-    let pickedText = bingoArray.filter((item, key) => {
-      return picks.indexOf(key) > -1;
-    });
+    let pickedText = App.generatePicks(bingoArray, bingoArray.length);
     let matrix = [];
     for (let i = 0; i < 4; i++) {
       matrix[i] = [];
@@ -180,7 +178,10 @@ class App extends Component {
             <br />
             <p>3) Den endelige bingoen får du når du har fylt brettet</p>
             <br />
-            <p>4) Vinneren er førstemann til å få alle fire bingoer (eller h*n som har flest når genfors er over)</p>
+            <p>
+              4) Vinneren er førstemann til å få alle fire bingoer (eller h*n
+              som har flest når genfors er over)
+            </p>
           </div>
           <p>(Trykk for å lukke)</p>
         </div>
