@@ -148,7 +148,9 @@ a:visited {
 }
 
 .bingotext {
+  font-size: 3rem;
   display: flex;
+  align-items: center;
   margin: auto;
   color: white;
 }
