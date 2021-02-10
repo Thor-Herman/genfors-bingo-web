@@ -118,10 +118,8 @@ class App extends Component {
     let picks = [];
     for (let i = 0; i < 16; i++) {
       let k = Math.floor(Math.random() * numberOfLines);
-      console.log(k);
-      while (picks.indexOf(k) > -1) {
+      while (picks.indexOf(bingoArray[k]) > -1) {
         k = Math.floor(Math.random() * numberOfLines);
-        console.log(k);
       }
       picks[i] = bingoArray[k];
     }
