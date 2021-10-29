@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/genfors-bingo-web/static/css/main.0f9d5433.chunk.css",
-    "main.js": "/genfors-bingo-web/static/js/main.fedd2fa7.chunk.js",
-    "main.js.map": "/genfors-bingo-web/static/js/main.fedd2fa7.chunk.js.map",
+    "main.js": "/genfors-bingo-web/static/js/main.ff2d460d.chunk.js",
+    "main.js.map": "/genfors-bingo-web/static/js/main.ff2d460d.chunk.js.map",
     "runtime-main.js": "/genfors-bingo-web/static/js/runtime-main.fc7a754f.js",
     "runtime-main.js.map": "/genfors-bingo-web/static/js/runtime-main.fc7a754f.js.map",
     "static/js/2.4cd5cb56.chunk.js": "/genfors-bingo-web/static/js/2.4cd5cb56.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.fc7a754f.js",
     "static/js/2.4cd5cb56.chunk.js",
     "static/css/main.0f9d5433.chunk.css",
-    "static/js/main.fedd2fa7.chunk.js"
+    "static/js/main.ff2d460d.chunk.js"
   ]
 }
